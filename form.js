@@ -26,6 +26,15 @@ function validatePhoneNumber(input_str) {
     return re.test(input_str);
 }
 
+
+// check for name validation
+
+var isNameTrue = function validateName(name_) {
+    var regex = /^[a-zA-Z ]{2,30}$/;
+    var ctrl =  document.getElementById("name_");
+    return regex.test(ctrl.value);
+}
+
 // Check for password strength
 
 function check() {
@@ -49,7 +58,7 @@ function ShowAlert(event) {
     var confPass = document.getElementById("confirm_password").value
     var gender = document.getElementsByName('gender')
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    if (name == "") {
+    if (name == "" || !isNameTrue()) {
         swal("Invalid Name", "Enter a Valid Name", "info");
         name.focus
         return false;
