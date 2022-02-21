@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> User Registration </title>
+    <link rel="stylesheet" href="form.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- Google Maps JavaScript library -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyDesq_8wy00h50RYX1a0XCuPcuvnRmFFW4"></script>
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form >
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name <span class="req">*</span></span> 
+            <input required id="name_" type="text" placeholder="Enter your name" >
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name </span> 
+            <input id="l_name_" type="text" placeholder="Enter your name" >
+          </div>
+          <div class="input-box">
+            <span class="details">Location <span class="req">*</span></span>
+            <input required  type="text" id="search_input" placeholder="Enter you Location" >
+          </div>
+          <div class="input-box">
+            <span class="details">Email <span class="req">*</span></span>
+            <input required type="email" id="txtEmailId" placeholder="Enter your email" >
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number <span class="req">*</span></span>
+            <input required type="number" id="myform_phone" placeholder="Enter your number" >
+          </div>
+          <div class="input-box">
+            <span class="details"> Password <span class="req">*</span></span>
+            <input required onkeyup='check();' id="confirm_password" type="password" placeholder="Enter your password" >  <span><input id="show_pass" type="checkbox" onclick="Toggle()"> Show Pass</span>
+            
+            <span id='message'></span>
+          </div>
+
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" required id="dot-1">
+          <input type="radio" name="gender" required id="dot-2">
+          <input type="radio" name="gender" required id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input onclick="javascript:ShowAlert(event)" type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./form.js"></script>
+
+</body>
+</html>
